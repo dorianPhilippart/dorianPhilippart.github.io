@@ -75,6 +75,15 @@ h1 em, .contact h2 em { font-family: Georgia, serif; font-weight: 400; letter-sp
 .timeline h3 { font: 600 1.25rem/1.25 "Manrope", sans-serif; margin: 0; letter-spacing: -.025em; }
 .timeline p { color: var(--muted); margin: 0; }
 
+.work-study { display: grid; grid-template-columns: .45fr 1.55fr; gap: 3rem; background: var(--ink); color: var(--paper); }
+.work-study .section-label { color: #aeb6b1; }
+.work-study h2 { font-size: clamp(2.7rem, 5.3vw, 5.7rem); }
+.work-study-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 4rem; }
+.work-study-grid article { border: 1px solid #4d5550; border-radius: .65rem; padding: 1.6rem; min-height: 300px; display: flex; flex-direction: column; }
+.work-study-grid span { color: var(--accent); font-size: .875rem; text-transform: uppercase; letter-spacing: .08em; }
+.work-study-grid h3 { font: 600 clamp(1.35rem, 2vw, 1.8rem)/1.15 "Manrope", sans-serif; letter-spacing: -.035em; margin: auto 0 1rem; }
+.work-study-grid p { color: #b8c0bb; margin: 0; }
+
 .skills { background: #dbe2ff; }
 .skills-head { display: grid; grid-template-columns: .45fr 1.55fr; gap: 3rem; }
 .skills h2 { font-size: clamp(2.5rem, 5vw, 5.2rem); max-width: 1000px; }
@@ -155,9 +164,11 @@ footer .brand { color: var(--ink); text-decoration: none; }
   .hero { grid-template-columns: 1fr; padding-top: 4.5rem; }
   .profile-card { max-width: 380px; justify-self: center; transform: rotate(1deg); }
   .about, .projects-head { grid-template-columns: 1fr; }
-  .journey, .skills-head { grid-template-columns: 1fr; }
+  .journey, .skills-head, .work-study { grid-template-columns: 1fr; }
   .timeline article { grid-template-columns: 1fr; gap: .6rem; }
   .skill-grid { grid-template-columns: 1fr; }
+  .work-study-grid { grid-template-columns: 1fr; }
+  .work-study-grid article { min-height: 240px; }
   .featured-project { grid-template-columns: 1fr; padding: 2rem 0; }
   .featured-project.reverse .project-visual, .featured-project.reverse .featured-copy { order: initial; }
   .project-visual { min-height: 340px; }
