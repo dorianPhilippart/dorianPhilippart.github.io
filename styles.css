@@ -105,7 +105,7 @@ h1 em, .contact h2 em { font-family: Georgia, serif; font-weight: 400; letter-sp
 .project-visual img { width: 100%; height: 100%; max-height: 440px; object-fit: contain; }
 .defiut-visual { background: #cfc4ff; }
 .defiut-visual img { width: min(70%, 340px); height: auto; }
-.esport-visual { background: #f5f7ff; }
+.api-visual { background: #ffad83; color: var(--ink); }
 .vigilis-visual { background: #14283b; }
 .infra-visual { background: #cfff35; color: var(--ink); }
 .featured-copy > span { color: #aeb6b1; font-size: .875rem; text-transform: uppercase; letter-spacing: .08em; }
@@ -113,6 +113,12 @@ h1 em, .contact h2 em { font-family: Georgia, serif; font-weight: 400; letter-sp
 .featured-copy p { color: #bbc2bd; font-size: 1.05rem; max-width: 600px; }
 .featured-copy ul { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 2rem 0 0; list-style: none; }
 .featured-copy li { border: 1px solid #555d58; border-radius: 2rem; padding: .45rem .8rem; font-size: .875rem; }
+.project-source { display: inline-block; color: var(--paper); margin-top: 1.5rem; padding-bottom: .2rem; border-bottom: 1px solid currentColor; text-decoration: none; font-weight: 600; }
+.api-art { width: min(82%, 520px); display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; align-items: stretch; }
+.api-art span, .api-art strong, .api-art code { min-height: 6.5rem; padding: 1rem; border: 2px solid var(--ink); border-radius: .5rem; display: grid; place-items: center; text-align: center; box-shadow: .5rem .5rem 0 var(--ink); }
+.api-art strong { grid-column: 1 / -1; background: var(--paper); font: 600 clamp(1.5rem, 3vw, 2.5rem) "Manrope", sans-serif; }
+.api-art span { background: #dbe2ff; font-weight: 600; }
+.api-art code { grid-column: 1 / -1; min-height: 4rem; background: var(--ink); color: var(--paper); box-shadow: none; font-size: 1rem; }
 .network-art { width: min(85%, 540px); aspect-ratio: 1.2; position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .network-art::before, .network-art::after { content: ""; position: absolute; background: var(--ink); opacity: .45; z-index: 0; }
 .network-art::before { width: 70%; height: 2px; top: 50%; left: 15%; }
