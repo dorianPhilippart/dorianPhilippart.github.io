@@ -6,12 +6,15 @@ const escapeHtml = (value = "") => String(value).replace(/[&<>'"]/g, character =
 
 async function loadGithubProfile() {
   const grid = document.querySelector("#project-grid");
+
   try {
     const [profileResponse, repositoriesResponse] = await Promise.all([
       fetch(`https://api.github.com/users/${GITHUB_USER}`),
       fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`)
     ]);
-    if (!profileResponse.ok || !repositoriesResponse.ok) throw new Error("GitHub API unavailable");
+    if (!profileResponse.ok || !repositoriesResponse.ok) {
+      throw new Error("GitHub API unavailable");
+    }
 
     const profile = await profileResponse.json();
     const repositories = await repositoriesResponse.json();
@@ -19,9 +22,13 @@ async function loadGithubProfile() {
       .filter(repository => !repository.fork && repository.name.toLowerCase() !== `${GITHUB_USER}.github.io`.toLowerCase())
       .slice(0, 3);
 
-    document.querySelector("#profile-name").textContent = profile.name || "Dorian Philippart";
-    document.querySelector("#profile-location").textContent = profile.location || "BUT Informatique";
-    document.querySelector("#profile-avatar").src = profile.avatar_url;
+    const profileName = document.querySelector("#profile-name");
+    const profileLocation = document.querySelector("#profile-location");
+    const profileAvatar = document.querySelector("#profile-avatar");
+
+    profileName.textContent = profile.name || "Dorian Philippart";
+    profileLocation.textContent = profile.location || "BUT Informatique";
+    profileAvatar.src = profile.avatar_url;
 
     if (!projects.length) {
       grid.innerHTML = `<p class="projects-empty">Mes projets publics arriveront bientôt. Retrouvez déjà mon activité sur GitHub.</p>`;
@@ -39,7 +46,7 @@ async function loadGithubProfile() {
           </div>
         </div>
       </a>`).join("");
-  } catch (error) {
+  } catch {
     grid.innerHTML = `<p class="projects-empty">Les dépôts publics ne peuvent pas être chargés pour le moment. Ils restent accessibles sur mon profil GitHub.</p>`;
   }
 }

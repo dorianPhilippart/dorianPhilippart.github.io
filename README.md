@@ -1,19 +1,17 @@
-# Portfolio — Dorian Philippart
+# Portfolio de Dorian Philippart
 
-Portfolio personnel statique destiné à GitHub Pages : `https://dorianphilippart.github.io`.
+Site personnel présentant mon parcours en BUT Informatique, mes compétences en
+déploiement, systèmes et sécurité, ainsi qu’une sélection de projets réalisés à
+l’IUT.
 
-## Contenu
+Le portfolio est disponible sur
+[dorianphilippart.github.io](https://dorianphilippart.github.io).
 
-- Parcours en BUT Informatique 2024–2027
-- Compétences en développement, données, infrastructure et DevOps
-- Sélection de projets réalisés à l’IUT
-- Chargement automatique des dépôts publics GitHub récents
+## Technologies
 
-## Publication
+- HTML sémantique
+- CSS responsive
+- JavaScript natif
+- API publique GitHub
 
-1. Créer un dépôt GitHub public nommé exactement `dorianphilippart.github.io`.
-2. Copier les fichiers de ce dossier à la racine du dépôt.
-3. Envoyer les fichiers sur la branche `main`.
-4. Dans **Settings → Pages**, sélectionner **Deploy from a branch**, puis `main` et `/ (root)`.
-
-Le site est autonome et ne nécessite aucune compilation.
+Le site est statique et ne nécessite aucune compilation.
