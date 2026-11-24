@@ -107,6 +107,8 @@ h1 em, .contact h2 em { font-family: Georgia, serif; font-weight: 400; letter-sp
 .defiut-visual img { width: min(70%, 340px); height: auto; }
 .api-visual { background: #ffad83; color: var(--ink); }
 .vigilis-visual { background: #14283b; }
+.mongolingo-visual { background: #d7d1ff; }
+.mongolingo-visual img { width: min(68%, 335px); height: auto; }
 .infra-visual { background: #cfff35; color: var(--ink); }
 .featured-copy > span { color: #aeb6b1; font-size: .875rem; text-transform: uppercase; letter-spacing: .08em; }
 .featured-copy h3 { font: 600 clamp(2rem, 4vw, 4.3rem)/1.02 "Manrope", sans-serif; letter-spacing: -.055em; margin: 1rem 0 1.5rem; }
